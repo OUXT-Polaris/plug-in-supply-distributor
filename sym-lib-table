@@ -1,2 +1,3 @@
 (sym_lib_table
+  (lib (name OneGateLogic)(type Legacy)(uri ${KICAD_USER_SYMBOL}/OneGateLogic.lib)(options "")(descr ""))
 )
