@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date "2021-07-14"
+Title "plug-in-supply-distributor"
+Date "2021-07-29"
 Rev ""
-Comp "OUXT"
+Comp "OUXT Polaris"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -23,17 +23,6 @@ F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4500 3250 50  0001
 F 3 "~" H 4500 3250 50  0001 C CNN
 	1    4500 3250
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 60B17476
-P 4000 4900
-F 0 "R6" H 4070 4946 50  0000 L CNN
-F 1 "47k" H 4070 4855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3930 4900 50  0001 C CNN
-F 3 "~" H 4000 4900 50  0001 C CNN
-	1    4000 4900
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R13
@@ -83,19 +72,6 @@ F 3 "~" H 6500 3250 50  0001 C CNN
 	1    6500 3250
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:VDD #PWR010
-U 1 1 60B2ACDE
-P 4000 4650
-F 0 "#PWR010" H 4000 4500 50  0001 C CNN
-F 1 "VDD" H 4015 4823 50  0000 C CNN
-F 2 "" H 4000 4650 50  0001 C CNN
-F 3 "" H 4000 4650 50  0001 C CNN
-	1    4000 4650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4000 4650 4000 4750
 $Comp
 L Device:R R9
 U 1 1 60B302B6
@@ -409,30 +385,6 @@ Text Label 7850 3200 2    50   ~ 0
 interlock
 Text Label 7850 3000 2    50   ~ 0
 vout
-$Comp
-L Device:R R7
-U 1 1 60D27ADD
-P 4300 4900
-F 0 "R7" H 4370 4946 50  0000 L CNN
-F 1 "47k" H 4370 4855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4230 4900 50  0001 C CNN
-F 3 "~" H 4300 4900 50  0001 C CNN
-	1    4300 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VDD #PWR011
-U 1 1 60D282DA
-P 4300 4650
-F 0 "#PWR011" H 4300 4500 50  0001 C CNN
-F 1 "VDD" H 4315 4823 50  0000 C CNN
-F 2 "" H 4300 4650 50  0001 C CNN
-F 3 "" H 4300 4650 50  0001 C CNN
-	1    4300 4650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 4650 4300 4750
 Text Label 1150 4800 0    50   ~ 0
 disable
 $Comp
@@ -1073,8 +1025,8 @@ $Comp
 L OneGateLogic:SN74LVC1G27DBVR U5
 U 1 1 60F82EFC
 P 4700 5250
-F 0 "U5" H 4700 5575 50  0000 C CNN
-F 1 "SN74LVC1G27DBVR" H 4700 5484 50  0000 C CNN
+F 0 "U5" H 4700 5450 50  0000 C CNN
+F 1 "SN74LVC1G27DBVR" H 4700 5050 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 4700 5250 50  0001 C CNN
 F 3 "https://www.tij.co.jp/lit/ds/symlink/sn74lvc1g27.pdf?ts=1626802154306&ref_url=https%253A%252F%252Fwww.ti.com%252Fstore%252Fti%252Fja-jp%252Fp%252Fproduct%252F%253Fp%253DSN74LVC1G27DBVR%2526utm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dasc-null-null-OPN_EN-cpc-store-google-jp%2526utm_content%253DDevice%2526ds_k%253DSN74LVC1G27DBVR%2526DCM%253Dyes%2526gclid%253DCj0KCQjw6NmHBhD2ARIsAI3hrM21baLNjQLcfhIPc83U9RIsEeS57zkLszNi1ejNe7DC-2wSgBXpqdsaAiG9EALw_wcB%2526gclsrc%253Daw.ds" H 4700 5250 50  0001 C CNN
 	1    4700 5250
@@ -1091,25 +1043,73 @@ F 3 "https://www.tij.co.jp/lit/ds/symlink/sn74lvc1g27.pdf?ts=1626802154306&ref_u
 	2    8950 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4300 5350 4400 5350
-Wire Wire Line
-	4300 5050 4300 5350
-Connection ~ 4300 5350
-Wire Wire Line
-	3400 5350 4300 5350
 Text Label 3450 5150 0    50   ~ 0
 interlock
 Text Label 3450 5350 0    50   ~ 0
 sw
-Wire Wire Line
-	4000 5050 4000 5150
-Wire Wire Line
-	4000 5150 4400 5150
-Wire Wire Line
-	3400 5150 4000 5150
-Connection ~ 4000 5150
 Connection ~ 3100 5250
 Wire Wire Line
 	3100 5250 4400 5250
+Connection ~ 4000 5150
+Wire Wire Line
+	4000 5150 4400 5150
+Connection ~ 4300 5350
+Wire Wire Line
+	4300 5350 4400 5350
+Wire Wire Line
+	3400 5350 4300 5350
+Wire Wire Line
+	3400 5150 4000 5150
+Wire Wire Line
+	4000 5050 4000 5150
+Wire Wire Line
+	4300 5050 4300 5350
+Wire Wire Line
+	4300 4650 4300 4750
+$Comp
+L power:VDD #PWR011
+U 1 1 60D282DA
+P 4300 4650
+F 0 "#PWR011" H 4300 4500 50  0001 C CNN
+F 1 "VDD" H 4315 4823 50  0000 C CNN
+F 2 "" H 4300 4650 50  0001 C CNN
+F 3 "" H 4300 4650 50  0001 C CNN
+	1    4300 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 60D27ADD
+P 4300 4900
+F 0 "R7" H 4370 4946 50  0000 L CNN
+F 1 "47k" H 4370 4855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4230 4900 50  0001 C CNN
+F 3 "~" H 4300 4900 50  0001 C CNN
+	1    4300 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4650 4000 4750
+$Comp
+L power:VDD #PWR010
+U 1 1 60B2ACDE
+P 4000 4650
+F 0 "#PWR010" H 4000 4500 50  0001 C CNN
+F 1 "VDD" H 4015 4823 50  0000 C CNN
+F 2 "" H 4000 4650 50  0001 C CNN
+F 3 "" H 4000 4650 50  0001 C CNN
+	1    4000 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 60B17476
+P 4000 4900
+F 0 "R6" H 4070 4946 50  0000 L CNN
+F 1 "47k" H 4070 4855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3930 4900 50  0001 C CNN
+F 3 "~" H 4000 4900 50  0001 C CNN
+	1    4000 4900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
